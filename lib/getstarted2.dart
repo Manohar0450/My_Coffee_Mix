@@ -15,7 +15,7 @@ class _LogInState extends State<two> {
         children: [
           Container(
             width: double.infinity,
-            height: double.infinity,
+            height: 900,
             child: Image.network(
 'https://i.pinimg.com/236x/55/14/54/551454b20e9c2df379eb2928625a4efc.jpg'
               ,fit: BoxFit.cover,),
@@ -60,7 +60,7 @@ class _LogInState extends State<two> {
                               Icon(Icons.arrow_forward_sharp)
                             ],
                           ),
-                          
+
                         ),
                       ),
                     ),

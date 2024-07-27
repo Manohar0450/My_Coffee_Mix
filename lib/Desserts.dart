@@ -34,7 +34,7 @@ class dess extends StatelessWidget {
   ];
 
   final List<String> des = [
-    "A cappuccino without chocolate is a classic Italian coffee made with equal parts espresso and steamed milk, topped with frothed milk foam. It lacks any cocoa powder or chocolate syrup typically used as garnish, resulting in a more traditional and less sweet flavor profile.",
+    "A cappuccino without chocolate is a classic Italian coffee \n made with equal parts espresso and steamed milk, toppe\nd with frothed milk foam. It lacks any cocoa powder or chocolate syrup typically used as garnish, resulting in a more traditional and less sweet flavor profile.",
     "A latte with chocolate is a coffee drink made with espresso and steamed milk, enriched with chocolate syrup or cocoa powder. It offers a smooth, creamy texture with a hint of chocolate flavor, making it a popular choice for those who enjoy a touch of sweetness in their coffee.",
     "Flavoured black coffee typically refers to a regular black coffee (brewed coffee without milk or cream) that has been infused or flavored with various additions such as syrups",
     "Tea flavors can vary widely depending on the type and blends used. Some common tea flavors."

@@ -46,10 +46,10 @@ class _homeState extends State<profile> {
                     SizedBox(height: 410,),
                     Padding(
                       padding: const EdgeInsets.only(left: 10),
-                      child: Text('K.Kavya',style: TextStyle(fontWeight: FontWeight.bold,fontSize: 50,color: Colors.white),),
+                      child: Text('My Coffee Mix',style: TextStyle(fontWeight: FontWeight.bold,fontSize: 50,color: Colors.white),),
                     ),
                     // SizedBox(height: 10,),
-                    Text('+91  9876543218',style: TextStyle(fontSize: 20,color: Colors.white),),
+                    Text('+91  9876543210',style: TextStyle(fontSize: 20,color: Colors.white),),
                     // SizedBox(height: 10,),
                     // Text('+91  8522830865',style: TextStyle(fontSize: 20,color: Colors.white),),
                     SizedBox(height: 10,),
@@ -177,7 +177,18 @@ class _homeState extends State<profile> {
 
                     ],
                   ),
-                )
+                ),
+
+                Positioned(
+                  left: 10,
+                  top: 30,
+                  child: IconButton(
+                    icon: Icon(Icons.arrow_circle_left, color: Colors.white, size: 30),
+                    onPressed: () {
+                      Navigator.pop(context);
+                    },
+                  ),
+                ),
               ],
             ),
           ],
@@ -257,17 +268,6 @@ class _detailsState extends State<details> {
             ]
         ),
       ),
-
-      //
-      // bottomNavigationBar: Container(
-      //   height: 90,
-      //   width: 500,
-      //   decoration: BoxDecoration(borderRadius: BorderRadius.all(Radius.circular(30),),color: Colors.black),
-      //   child: Center(
-      //     child:Icon(Icons.favorite,color: Colors.red,size: 30,)
-      //   ),
-      // ),
-
 
     );
   }

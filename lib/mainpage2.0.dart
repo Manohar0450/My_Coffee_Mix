@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:mycoffeemix/coustamize.dart';
 import 'package:mycoffeemix/mainpage.dart';
 import 'package:mycoffeemix/payment.dart';
+
 class Detail extends StatefulWidget {
   final String url;
   final String description;
@@ -24,9 +25,9 @@ class _DetailState extends State<Detail> {
 
   // Define size-specific data
   final Map<int, Map<String, String>> sizeData = {
-    0: {'price': '5.00', 'rating': '4.0 (1,234)'},
-    1: {'price': '6.00', 'rating': '4.5 (6,986)'},
-    2: {'price': '7.00', 'rating': '5.0 (12,345)'},
+    0: {'price': '650/-', 'rating': '4.0 (1,234)'},
+    1: {'price': '899/-', 'rating': '4.5 (6,986)'},
+    2: {'price': '999/-', 'rating': '5.0 (12,345)'},
   };
 
   void select(int index) {
@@ -37,9 +38,22 @@ class _DetailState extends State<Detail> {
 
   @override
   Widget build(BuildContext context) {
-    String currentPrice = sizeData[selindex]!['price']!;
-    String currentRating = sizeData[selindex]!['rating']!;
-
+    String Price = sizeData[selindex]!['price']!;
+    String Rating = sizeData[selindex]!['rating']!;
+    double c;
+    switch (selindex) {
+      case 0:
+        c = 100.0;
+        break;
+      case 1:
+        c= 150.0;
+        break;
+      case 2:
+        c = 200.0;
+        break;
+      default:
+        c =200.0;
+    }
     return Scaffold(
       backgroundColor: Color(0xFF181818),
       body: Padding(
@@ -78,8 +92,9 @@ class _DetailState extends State<Detail> {
                     ],
                   ),
                   SizedBox(height: 40),
-                  Container(
-                    width: 200,
+                  AnimatedContainer(
+                    duration: Duration(milliseconds: 200),
+                    width: c,
                     height: 200,
                     decoration: BoxDecoration(
                       shape: BoxShape.circle,
@@ -106,7 +121,7 @@ class _DetailState extends State<Detail> {
                       Icon(Icons.star, color: Colors.orange),
                       SizedBox(width: 4),
                       Text(
-                        currentRating,
+                        Rating,
                         style: TextStyle(
                           color: Colors.white70,
                         ),
@@ -218,7 +233,7 @@ class _DetailState extends State<Detail> {
             ),
             Center(
               child: Text(
-                '\$${currentPrice}',
+                '${Price}',
                 style: TextStyle(color: Colors.orange, fontSize: 20),
               ),
             ),

@@ -1,6 +1,8 @@
 import 'dart:async';
 import 'package:flutter/material.dart';
 import 'review.dart';
+// import 'package:flutter/material.dart';
+import 'package:lottie/lottie.dart';
 class payment extends StatefulWidget {
   const payment({super.key});
 
@@ -43,7 +45,7 @@ class _homeState extends State<payment> {
                       radius: 55,
                       backgroundColor: Colors.black,
                       backgroundImage: NetworkImage('https://st1.latestly.com/wp-content/uploads/2022/11/unnamed-2022-11-09T181714.003.jpg'),
-        
+
                     ),
                   ),
                   SizedBox(width: 10,),
@@ -74,7 +76,7 @@ class _homeState extends State<payment> {
                       ),
                     ),
                   ),
-        
+
                 ],
               ),
             ),
@@ -92,7 +94,7 @@ class _homeState extends State<payment> {
               child: Row(
                 children: [
                   SizedBox(width: 15,),
-        
+
                   GestureDetector(onTap: (){Navigator.push(context,MaterialPageRoute(builder: (context)=>axis()));
                   },
                     child: Container(
@@ -115,9 +117,9 @@ class _homeState extends State<payment> {
                 ],
               ),
             ),
-        
+
             SizedBox(height: 85,),
-        
+
             SingleChildScrollView(scrollDirection: Axis.horizontal,
               child: Row(
                 children: [
@@ -136,10 +138,10 @@ class _homeState extends State<payment> {
                 ],
               ),
             ),
-        
-        
-        
-        
+
+
+
+
             // Row(
             //   children: [
             //     SizedBox(width: 35,),
@@ -154,11 +156,11 @@ class _homeState extends State<payment> {
             //       decoration: BoxDecoration(color: Colors.black,borderRadius: BorderRadius.all(Radius.circular(10)),image:DecorationImage(image: NetworkImage('https://th.bing.com/th/id/OIP.mUXg4lM86BTYfZuQyrSMyAAAAA?rs=1&pid=ImgDetMain'),fit: BoxFit.cover)),
             //
             //     )
-        
-        
-        
-        
-        
+
+
+
+
+
             // SizedBox(height: 351,),
             // Container(height: 180,width: double.infinity,decoration: BoxDecoration(border: Border.all(color: Colors.black,width: 3),borderRadius: BorderRadius.only(topRight: Radius.circular(20),topLeft: Radius.circular(20))),)
           ],
@@ -428,9 +430,7 @@ class paying extends StatefulWidget {
   @override
   State<paying> createState() => _payingState();
 }
-
 class _payingState extends State<paying> {
-
   @override
   void initState(){
     super.initState();
@@ -438,17 +438,14 @@ class _payingState extends State<paying> {
       Navigator.pushReplacement(context,MaterialPageRoute(builder: (context)=>sucess()));
     });
   }
-
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.white,
-
       body:Center(
-        child: Container(
-          child: CircularProgressIndicator(color: Colors.black,),
-        ),
+        child:  Lottie.network(
+'https://lottie.host/d81e4144-1220-4c74-b46e-abed23e35f95/erdC5MJ8eh.json'
+            ,width: 500,height: 300),
       ),
     );
   }
@@ -467,33 +464,40 @@ class _sucessState extends State<sucess> {
     return Scaffold(
       backgroundColor: Colors.white,
 
-      body:Column(
-          children: [
-            SizedBox(height: 150,),
-            Text('  Payment\nSuccessful',style: TextStyle(fontSize: 55,color: Colors.black,fontWeight: FontWeight.bold),),
-            SizedBox(height: 50,),
-            Row(
-              children: [
-                SizedBox(width: 160,),
-                CircleAvatar(
-                  radius:50,
-                  backgroundColor: Colors.black,
-                  backgroundImage: NetworkImage('https://th.bing.com/th/id/OIP.1AkdlsxCgnULxNvcCxeVDAHaHh?rs=1&pid=ImgDetMain',),
+      body:SingleChildScrollView(
+        child: Column(
+            children: [
+              SizedBox(height: 150,),
+              Center(child: Text('  Payment\nSuccessful',style: TextStyle(fontSize: 55,color: Colors.black,fontWeight: FontWeight.bold),)),
+              SizedBox(height: 50,),
+              // Row(
+              //   children: [
+              //     SizedBox(width: 160,),
+              //     CircleAvatar(
+              //       radius:50,
+              //       backgroundColor: Colors.black,
+              //       backgroundImage: NetworkImage('',),
+              //     ),
+              //
+              //   ],
+              // ),
+              Lottie.network(
+        'https://lottie.host/0bd2fdc0-9ac1-4655-920a-f0bac4008f52/UGSEENDQ4F.json'
+                      ,width: 200,height: 300),
+        
+              SizedBox(height: 100,),
+              GestureDetector(onTap: (){
+                Navigator.push(context, MaterialPageRoute(builder: (context)=>home1()));
+              },
+                child: Container(
+                  height: 80,
+                  width: 180,
+                  decoration: BoxDecoration(color: Colors.orange,borderRadius: BorderRadius.all(Radius.circular(30))),
+                  child: Center(child: Text('Done',style: TextStyle(color: Colors.white,fontWeight: FontWeight.bold,fontSize: 30),)),
                 ),
-              ],
-            ),
-            SizedBox(height: 300,),
-            GestureDetector(onTap: (){
-              Navigator.push(context, MaterialPageRoute(builder: (context)=>home1()));
-            },
-              child: Container(
-                height: 80,
-                width: 180,
-                decoration: BoxDecoration(color: Colors.orange,borderRadius: BorderRadius.all(Radius.circular(30))),
-                child: Center(child: Text('Done',style: TextStyle(color: Colors.white,fontWeight: FontWeight.bold,fontSize: 30),)),
-              ),
-            )
-          ]
+              )
+            ]
+        ),
       ),
     );
   }

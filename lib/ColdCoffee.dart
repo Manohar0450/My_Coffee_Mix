@@ -9,7 +9,7 @@ class cold extends StatelessWidget {
     'https://i.pinimg.com/564x/4e/04/c0/4e04c03554303477db35e90449ebf29b.jpg',
     'https://i.pinimg.com/564x/c3/c9/53/c3c953a617ac05f31c32bf401d524722.jpg',
     'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRYP4rM2tl-576_K7cOsARwfM-1dS6UtrynAA&s',
-    'https://media.istockphoto.com/id/157528129/photo/mug-on-plate-filled-with-coffee-surrounded-by-coffee-beans.jpg?s=612x612&w=0&k=20&c=W_za-myO9QP_dimiJeZXsR4G2GHjrdo0RTyO3yVhopQ=',
+    'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRYP4rM2tl-576_K7cOsARwfM-1dS6UtrynAA&s',
     'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQwh5ACLB0bzMvFMFkqNNEBUk7OTNbaPX4KDA&s'
 
   ];
@@ -38,7 +38,10 @@ class cold extends StatelessWidget {
     "A cappuccino without chocolate is a classic Italian coffee made with equal parts espresso and steamed milk, topped with frothed milk foam. It lacks any cocoa powder or chocolate syrup typically used as garnish, resulting in a more traditional and less sweet flavor profile.",
     "A latte with chocolate is a coffee drink made with espresso and steamed milk, enriched with chocolate syrup or cocoa powder. It offers a smooth, creamy texture with a hint of chocolate flavor, making it a popular choice for those who enjoy a touch of sweetness in their coffee.",
     "Flavoured black coffee typically refers to a regular black coffee (brewed coffee without milk or cream) that has been infused or flavored with various additions such as syrups",
+    "Tea flavors can vary widely depending on the type and blends used. Some common tea flavors.",
+    "Flavoured black coffee typically refers to a regular black coffee (brewed coffee without milk or cream) that has been infused or flavored with various additions such as syrups",
     "Tea flavors can vary widely depending on the type and blends used. Some common tea flavors."
+
 
   ];
 
@@ -83,8 +86,7 @@ class cold extends StatelessWidget {
                   children: [
                     ClipRRect(
                       borderRadius: BorderRadius.circular(20),
-                      child: Image.network(
-                        k[index],
+                      child: Image.network(k[index],
                         height: 100,
                         width: 100,
                         fit: BoxFit.cover,

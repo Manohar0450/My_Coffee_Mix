@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-
+import 'notification.dart';
+import 'mainpage.dart';
 
 class MyHomePage extends StatefulWidget {
   @override
@@ -178,8 +179,39 @@ class _MyHomePageState extends State<MyHomePage> {
               ],
             ),
           ),
+          Positioned(
+            left: 10,
+            top: 30,
+            child: IconButton(
+              icon: Icon(Icons.arrow_circle_left, color: Colors.white, size: 30),
+              onPressed: () {
+                Navigator.pop(context);
+              },
+            ),
+          ),
         ],
+
       ),
+      bottomNavigationBar: BottomNavigationBar(
+        backgroundColor: Colors.black,
+        items: [
+
+          BottomNavigationBarItem(icon: GestureDetector(
+              onTap: (){
+                Navigator.push(context, MaterialPageRoute(builder: (context)=>Home()));
+              },
+              child: Icon(Icons.home,color: Colors.white,)),label: ''),
+    BottomNavigationBarItem(icon: GestureDetector(
+    onTap: (){
+    },
+    child: Icon(Icons.menu_book,color: Colors.orange,)),label: ''),
+          BottomNavigationBarItem(icon: GestureDetector(
+              onTap: (){
+                Navigator.push(context, MaterialPageRoute(builder: (context)=>NotificationsScreen()));
+              },
+              child: Icon(Icons.notification_add_rounded,color: Colors.white,)),label: ''),
+
+        ],),
     );
   }
 

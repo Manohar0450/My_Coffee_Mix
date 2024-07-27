@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:lottie/lottie.dart';
+import 'mainpage.dart';
 class home1 extends StatefulWidget {
   const home1({super.key});
 
@@ -109,7 +111,9 @@ class _home1State extends State<home1> {
                       child: Container(
                         height: 180,
                         width: 180,
-                        decoration: BoxDecoration(color: Colors.red,image: DecorationImage(image: NetworkImage('https://i.pinimg.com/236x/a3/45/04/a34504aefdc20cc2f776d978d59e990f.jpg',),fit: BoxFit.cover),borderRadius: BorderRadius.circular(120)),
+                        decoration: BoxDecoration(image: DecorationImage(image: NetworkImage(
+'https://i.pinimg.com/236x/88/38/55/8838550699600756f577bbc1dcfc695b.jpg'
+                          ,),fit: BoxFit.cover),borderRadius: BorderRadius.circular(120)),
                       ),
                     ),
                   ]
@@ -148,7 +152,7 @@ class _nextState extends State<next> {
                     children: [
                       Padding(
                         padding: const EdgeInsets.only(left: 20),
-                        child: GestureDetector(onTap: (){Navigator.push(context,MaterialPageRoute(builder:(context)=>home1()));
+                        child: GestureDetector(onTap: (){Navigator.push(context,MaterialPageRoute(builder:(context)=>Home()));
                         },
                             child: Icon(Icons.arrow_back,size: 35,color: Colors.white,)),
                       ),
@@ -166,21 +170,13 @@ class _nextState extends State<next> {
                   decoration: BoxDecoration(color: Colors.white,borderRadius: BorderRadius.only(topRight: Radius.circular(30),topLeft: Radius.circular(30))),
                   child:  Column(
                     children: [
-                      SizedBox(height: 130,),
-                      IconButton(onPressed: (){}, icon: Icon(Icons.thumb_up,size: 80,color: Colors.orange,)),
+                      SizedBox(height: 100,),
+                      // IconButton(onPressed: (){}, icon: Icon(Icons.thumb_up,size: 80,color: Colors.orange,)),
+                      Lottie.network(
+'https://lottie.host/40e4e424-4de4-4434-ba3c-b7d406af2ac1/GhdFkPvg4W.json'
+                          ,width: 200,height: 300),
                       SizedBox(height: 40,),
-                      Row(
-                        children: [
-                          SizedBox(width: 45,),
-                          Text('Thank you for Visiting us!',style: TextStyle(fontWeight: FontWeight.bold,fontSize: 25,color: Colors.black),),
-                          SizedBox(width: 5,),
-                          CircleAvatar(
-                            radius: 10,
-                            backgroundColor: Colors.red,
-                            backgroundImage: NetworkImage('https://i2.wp.com/www.papertraildesign.com/wp-content/uploads/2017/06/Happy.png'),
-                          )
-                        ],
-                      ),
+
                       SizedBox(height: 50,),
 
                     ],
@@ -193,7 +189,9 @@ class _nextState extends State<next> {
               child: Container(
                 height: 180,
                 width: 180,
-                decoration: BoxDecoration(color: Colors.red,image: DecorationImage(image: NetworkImage('https://i.pinimg.com/236x/a3/45/04/a34504aefdc20cc2f776d978d59e990f.jpg',),fit: BoxFit.cover),borderRadius: BorderRadius.circular(120)),
+                decoration: BoxDecoration(color: Colors.red,image: DecorationImage(image: NetworkImage(
+'https://i.pinimg.com/474x/a1/42/60/a14260c9e39b8ace9ed9719212c2a074.jpg'
+                  ,),fit: BoxFit.cover),borderRadius: BorderRadius.circular(120)),
 
               ),
             ),

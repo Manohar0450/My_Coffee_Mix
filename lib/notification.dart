@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:mycoffeemix/mainpage.dart';
 
-
+import 'menucard.dart';
 
 class NotificationsScreen extends StatelessWidget {
   final List<NotificationItem> notifications = [
@@ -70,6 +71,26 @@ class NotificationsScreen extends StatelessWidget {
           );
         },
       ),
+      bottomNavigationBar: BottomNavigationBar(
+        backgroundColor: Colors.black,
+        items: [
+
+          BottomNavigationBarItem(icon: GestureDetector(
+              onTap: (){
+                Navigator.push(context, MaterialPageRoute(builder: (context)=>Home()));
+              },
+              child: Icon(Icons.home,color: Colors.white,)),label: ''),
+          BottomNavigationBarItem(icon: GestureDetector(
+              onTap: (){
+                Navigator.push(context, MaterialPageRoute(builder: (context)=>MyHomePage()));
+              },
+              child: Icon(Icons.menu_book,color: Colors.white,)),label: ''),
+          BottomNavigationBarItem(icon: GestureDetector(
+              onTap: (){
+                Navigator.push(context, MaterialPageRoute(builder: (context)=>NotificationsScreen()));
+              },
+              child: Icon(Icons.notification_add_rounded,color: Colors.orange,)),label: ''),
+        ],),
     );
   }
 }

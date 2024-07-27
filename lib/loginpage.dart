@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'getstarted2.dart';
 import 'Regester.dart';
 import 'mainpage.dart';
+import 'package:lottie/lottie.dart';
 
 class Sign extends StatefulWidget {
   const Sign({super.key});
@@ -216,6 +217,18 @@ class _SignState extends State<Sign> {
                 ],
               ),
             ),
+          ),
+          Positioned(
+            top: 150,
+            left: 100,
+            child:
+            // Text(
+            //   'Hi, Welcome Back!✋',
+            //   style: TextStyle(fontSize: 30, color: Colors.white, fontWeight: FontWeight.bold),
+            // ),
+            Lottie.network(
+'https://lottie.host/812691fe-5a95-4fe2-b77b-4af80a1ff5c5/4fbtewgiuA.json'
+                ,width: 200,height: 300),
           ),
         ],
       ),

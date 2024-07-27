@@ -155,12 +155,19 @@ class _HomeState extends State<Home> {
         child: Stack(
           children: [
             // Background image
-            Container(
-              decoration: BoxDecoration(
-                image: DecorationImage(
-                  image: NetworkImage(
-'https://img.freepik.com/premium-photo/close-up-cup-black-hot-coffee-with-smoke-black-background-with-copy-space_861799-1338.jpg?ga=GA1.1.690210928.1721451751&semt=ais_user',                  ),
-                  fit: BoxFit.cover,
+            GestureDetector(
+              onTap:
+              (){
+                Navigator.push(context, MaterialPageRoute(builder: (context)=>profile()));
+              },
+              child: Container(
+                decoration: BoxDecoration(
+                  image: DecorationImage(
+                    image: NetworkImage(
+              'https://img.freepik.com/premium-photo/close-up-cup-black-hot-coffee-with-smoke-black-background-with-copy-space_861799-1338.jpg?ga=GA1.1.690210928.1721451751&semt=ais_user',
+                    ),
+                    fit: BoxFit.cover,
+                  ),
                 ),
               ),
             ),
@@ -171,7 +178,7 @@ class _HomeState extends State<Home> {
                   decoration: BoxDecoration(color: Colors.black.withOpacity(0.8)),
                   child: Column(
                     children: [
-                      CircleAvatar(radius: 50, backgroundImage: NetworkImage('https://i.pinimg.com/236x/e0/4a/fb/e04afbbb95426d86cb34b31bcf9f1571.jpg')),
+                      CircleAvatar(radius: 50, backgroundImage: NetworkImage('https://i.pinimg.com/236x/1f/ef/93/1fef93d9f1249087da491c053878b1f8.jpg')),
                       Text('My Coffee Mix', style: TextStyle(fontWeight: FontWeight.bold, fontSize: 20, color: Colors.white)),
                     ],
                   ),
@@ -256,7 +263,7 @@ class _HomeState extends State<Home> {
                 focusedBorder: OutlineInputBorder(borderSide: BorderSide(color: Colors.white)),
                 hintText: 'Find Your Meal',
                 hintStyle: TextStyle(color: Colors.white),
-                prefixIcon: Icon(Icons.search,color: Colors.white,),
+                suffixIcon: Icon(Icons.search,color: Colors.white,),
               ),),
             ),
             SizedBox(height: 20,),
@@ -276,35 +283,37 @@ class _HomeState extends State<Home> {
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
-                     Text(
-                      'All',
-                      style: TextStyle(color:Colors.orange, fontSize: 16),
-                    ),
-                    SizedBox(width: 30,),
-                    GestureDetector(onTap: (){
+                     ElevatedButton(
+                       onPressed: (){
+
+                       },
+                       child: Text(
+                        'All',
+                        style: TextStyle(color:Colors.orange, fontSize: 16),
+                                           ),
+                     ),
+                    SizedBox(width: 10,),
+                    ElevatedButton(onPressed: (){
                       Navigator.push(context, MaterialPageRoute(builder: (context)=>dess()));
                     },child: Text(
                       'Desserts',
                       style: TextStyle(color:Colors.white, fontSize: 16),
                     ),),
+                    SizedBox(width: 10,),
                     ElevatedButton(onPressed: (){
                         Navigator.push(context, MaterialPageRoute(builder: (context)=>hot()));
                     },child: Text(
                       'Hot Coffee',
                       style: TextStyle(color:Colors.white, fontSize: 16),
                     ),),
+                    SizedBox(width: 10,),
                     ElevatedButton(onPressed: (){
                       Navigator.push(context, MaterialPageRoute(builder: (context)=>cold()));
                     },child: Text(
                       'Cold Coffee',
                       style: TextStyle(color:Colors.white, fontSize: 16),
                     ),),
-                    // ElevatedButton(onPressed: (){
-                    //   Navigator.push(context, MaterialPageRoute(builder: (context)=>MyHomePage()));
-                    // },child: Text(
-                    //   'Menu Card',
-                    //   style: TextStyle(color:Colors.white, fontSize: 16),
-                    // ),),
+
                   ],
                 ),
 
@@ -635,7 +644,7 @@ class _HomeState extends State<Home> {
         backgroundColor: Colors.black,
         items: [
 
-          BottomNavigationBarItem(icon: Icon(Icons.home),label: ''),
+          BottomNavigationBarItem(icon: Icon(Icons.home,color: Colors.orange,),label: ''),
           BottomNavigationBarItem(icon: GestureDetector(
               onTap: (){
                 Navigator.push(context, MaterialPageRoute(builder: (context)=>MyHomePage()));
@@ -650,4 +659,3 @@ class _HomeState extends State<Home> {
     );
   }
 }
-
